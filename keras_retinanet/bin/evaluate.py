@@ -181,7 +181,7 @@ def main(args=None):
                   generator.label_to_name(label), 'with average precision: {:.4f}'.format(average_precision))
             total_instances.append(num_annotations)
             precisions.append(average_precision)
-            print('total instances: {:.4f}'.format(sum(num_annotations)))
+            print('total instances: {:.4f}'.format(sum(for x in num_annotations)))
 
         if sum(total_instances) == 0:
             print('No test instances found.')
