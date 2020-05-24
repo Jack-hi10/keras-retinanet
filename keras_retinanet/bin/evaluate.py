@@ -187,9 +187,9 @@ def main(args=None):
             return
 
         print('Inference time for {:.0f} images: {:.4f}'.format(generator.size(), inference_time))
-
+        print(sum(total_instances))
         print('mAP using the weighted average of precisions among classes: {:.4f}'.format(sum([a * b for a, b in zip(total_instances, precisions)]) / sum(total_instances)))
-        print('mAP: {:.4f}'.format(sum(precisions) / sum(x > 0 for x in total_instances)))
+        #print('mAP: {:.4f}'.format(sum(precisions) / sum(x > 0 for x in total_instances)))
 
 
 if __name__ == '__main__':
